@@ -1,7 +1,23 @@
 .site-list
 	outline: 1px solid yellow
-	min-height: 250px
 
+.site-list__item a
+	font-weight: bold
+
+	text-transform: uppercase
+	text-decoration: none
+
+	color: #ffffff
+
+@media (max-width: $mobile-width-only)
+	.site-list__item a
+		display: block
+		padding: 11px 21px 10px 21px
+		background-color: #826550
+
+		border-top: 1px solid #886e5b
+		border-bottom: 1px solid #71543f
+		
 @media (min-width: $tablet-width)
 	.site-list
 		width: 560px

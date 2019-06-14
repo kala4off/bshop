@@ -3,14 +3,27 @@
 	flex-direction: column
 
 .page-header__logo
-	@include bg()
 	min-height: 85px
+
+	text-align: center
+
+.page-header__logo img
+	width: 226px
+	height: 85px
+	
 
 @media (min-width: $tablet-width)
 	.page-header__logo
 		order: 2
 		height: 397px
 
+		background-color: #000000
+		background-image: url("../images/back-tablet.jpg")
+		background-repeat: no-repeat
+		background-position: center 0
+
 @media (min-width: $desktop-width)
 	.page-header__logo
 		height: 648px
+
+		background-size: cover
