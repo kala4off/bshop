@@ -1,0 +1,18 @@
+@mixin bg()
+	$t: "rgba(#{random(256) - 1}, #{random(256) - 1}, #{random(256) - 1},"
+	$color: unquote($t + "0.2)")
+	background-color: $color
+	position: relative
+	$color: unquote($t + "1)")
+	outline: 0px solid $color
+	&::before
+		color: #000000
+		content: attr(class)
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		background-color: $color
+		z-index: 10
+		font-size: 12px
+		line-height: 16px 
