@@ -1,17 +1,13 @@
 .user-list
-	outline: 1px solid #ffffff
+
 
 .user-list__login
 	position: relative
 	color: #ffffff
 
 	text-decoration: none
-	
-.user-list__login-icon
-	position: absolute
-	top: 17px
-	left: 21px
 
+.user-list__login-icon
 	width: 16px
 	height: 16px
 	
@@ -19,7 +15,6 @@
 
 	polygon
 		fill: #ffffff
-
 
 @media (max-width: $mobile-width-only)
 	.user-list
@@ -29,10 +24,67 @@
 		display: block
 		padding: 11px 0 12px 48px
 
+	.user-list__login-icon
+		position: absolute
+		top: 17px
+		left: 21px
+
 @media (min-width: $tablet-width)
 	.user-list
 		width: 48px
 
+	.user-list__login
+		display: block
+		padding-top: 28px
+		
+		width: 48px
+		height: 44px
+		
+		font-size: 0
+		text-align: center
+		
+		&:hover .user-list__login-icon
+			opacity: 1
+
+			polygon
+				fill: yellow
+
+
 @media (min-width: $desktop-width)
 	.user-list
 		width: 130px
+
+	.user-list__login
+		padding-top: 24px
+		padding-bottom: 24px
+		width: auto
+		height: auto
+		
+		font-size: 18px
+		line-height: 24px
+		font-weight: bold
+		text-transform: uppercase
+		// text-decoration: none
+
+		&:hover
+			color: #000000
+			background-color: #ffffff
+
+		&:active
+			color: rgba(0, 0, 0, 0.3)
+			background-color: #ffffff
+
+		&:hover .user-list__login-icon
+			opacity: 0.3
+
+			polygon
+				fill: #000000
+
+		&:active .user-list__login-icon
+			opacity: 0.1
+
+
+	.user-list__login-icon
+		position: absolute
+		top: 28px
+		left: 15px
